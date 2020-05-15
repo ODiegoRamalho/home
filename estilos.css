@@ -1,0 +1,193 @@
+*{ /* reset do CSS */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color:white;
+  font-family:  cursive;
+  height:100vh;
+  color: #34495e;
+  font-size: 10px;
+}
+
+ /* se a tela tiver pelo menos 400px vai carregar estes estilos */
+
+@media (min-width: 400px) {
+  body{
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 600px) {
+  body{
+    font-size: 18px;
+  }
+}
+
+header {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu {
+  background-color:#3498db;
+  position: fixed;/* acompanha o scroll */
+  width: 100vw;/* toda largura da tela */
+  top: 0; /* fica no topo */
+  z-index: 1;
+}
+
+.menu ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.menu li {
+  list-style:none
+}
+
+.menu a { /* area do link #7f8c8d */
+  background-color: #3498db;
+  display: block;
+  padding: 10px 20px;
+  text-decoration: none;
+  transition: background-color,color 2s;
+}
+
+.menu a:hover { /* hover= quando passar por cima */
+  background-color: white;
+  color: #3498db;
+}  
+
+.menu a:active { /* active= quando clicar */
+  background-color:#2ecc71;
+  color: #3498db;
+} 
+
+a {
+  color: white;
+ text-decoration:none;
+}
+
+a:hover {
+  text-decoration:underline;
+}
+
+.titulo {
+  transform: scale(0.2); translateY(50vh) ;
+  opacity: 0;
+  animation: linear 2s animacaoTitulo forwards;
+}
+
+@keyframes animacaoTitulo{
+
+  
+  100% {
+    transform: scale(1); translateY(0);
+    opacity: 1;
+
+  }
+}
+
+.site-title {
+  color:#34495e;
+  text-align: center;
+  font-family: 'Parisienne', cursive;
+}
+
+.site-subtitle {
+  color: #34495e;
+  font-style: italic;
+  text-align: center;
+  font-family: 'Oleo Script', cursive;
+  line-height: 1.8em ; /*Altura de linha*/
+}
+
+.site-title{
+
+  font-size: 4em;
+}
+.portfolio {
+
+  padding: 2em;
+}
+
+
+
+ .contato, .portfolio h2 {
+  margin-bottom: 1em;
+  font-family: 'Oleo Script', cursive;
+  font-size: 3em;
+
+ }
+
+ .portfolio .grid {
+
+  display: grid;
+  gap: 3em;
+  
+ }
+
+ @media (min-width: 560px){
+   .portfolio .grid{
+  grid-template-columns: 200px 200px 200px ;
+  justify-content: center; /* tela 560 justifycar*/
+   }
+
+ }
+
+ .portfolio figure {
+   text-align: center;
+   font-size: 2em;
+ }
+
+ .img-portfolio{ /* tamanho img */
+   height: 180px;
+   width: 180px;
+   transition: transform 1s;
+   
+ }
+
+ .img-portfolio:hover {
+  transform: scale(1.2) ;
+ }
+
+ .contato,
+h2 {
+  text-align: center;
+ 
+}
+
+.contato .icons {
+  text-align: center;
+}
+ 
+
+.contato a { /* cor do contato */
+
+  color: #3498db;
+  font-size: 2em;
+  transition: text-shadow 1s;
+}
+
+.contato a:active { /* active= quando clicar */
+  background-color:#2ecc71;
+  color: #3498db;
+} 
+
+.contato a:active,/*clicar */
+.contato a:hover {/* passar*/
+  text-decoration: none; /*tirar traços do link */
+  text-shadow: 0px 0px 10px rgba(35,35,142,1); /*Sombra */
+} 
+
+/* */
+
+/*  */
+/*  */
+/*  */
+
